@@ -35,23 +35,32 @@ const onClickSearchBtn = () => {
     return
   }
   
-  //
+  //moon rotation
   selectDate = new Date(dateInputEl.value)
   angle = moonFuncGetMoonPhaseRotation(selectDate)
   setMoonRotation(angle)
  
-  //
+  //moon phase data
   dateArr = dateSplit(dateInputEl.value)
   moonP = moonFuncGetMoonPhase(dateArr[0], dateArr[1], dateArr[2])
-  moonDisplayEl.innerHTML = moonFuncMoonPhaseData(moonP)
+  setMoonPhaseName(moonFuncMoonPhaseData(moonP))
 }
 
 const dateSplit = (dateStr) => {
   return dateStr.split('-').map(Number)
 }
 
+const setMoonPhaseName = phaseName => {
+  moonPhaseNameEl.innerHTML = phaseName
+}
+
+const setWaterValue = waterValue => {
+  waterValueEl.innerHTML = waterValue
+}
+
 //-- init --
-let moonDisplayEl = document.querySelector('.moon-display')
+let moonPhaseNameEl = document.querySelector('.moon-phase-name')
+let waterValueEl = document.querySelector('.water-value')
 let dateInputEl = document.querySelector('.date-input')
 let searchBtnEl = document.querySelector('.search-btn')
 
