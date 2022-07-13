@@ -1,4 +1,4 @@
-
+//
 const setMoonRotation = deg => {
   document.querySelector('.divider').style.transform = `rotate3d(0, 1, 0, ${deg}deg)`
 
@@ -23,8 +23,7 @@ const setMoonRotation = deg => {
   }
 }
 
-//ref js:
-// https://github.com/mourner/suncalc
+//
 const onClickSearchBtn = () => {
   let dateArr
   let moonP
