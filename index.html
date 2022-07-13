@@ -5,57 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>| Moon Phases</title>
+
+  <link rel="stylesheet" href="./css//index.css">
 </head>
 <body>
-
-  <style>
-    .sphere {
-      border-radius: 100%;
-      width: 300px;
-      height: 300px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      position: relative;
-      margin-bottom: 50px;
-    }
-    .divider,
-    .divider:after {
-        top: 0;
-        left: 0;
-        width: 300px;
-        height: 300px;
-        position: absolute;
-        border-radius: 100%;
-        transform-style: preserve-3d;
-        backface-visibility: hidden;
-    }
-
-    .divider {
-        background-color: #575851; /* Dark */
-    }
-
-    .divider:after {
-        content: '';
-        background-color: #e5ff00; /* Light */
-        transform: rotateY(180deg);
-    }
-    .hemisphere {
-        width: 50%;
-        height: 100%;
-    }
-
-    .light {
-        background-color: #e5ff00;
-    }
-
-    .dark {
-        background-color: #575851;
-    }
-
-  </style>
-
-
+ 
   <div class="sphere">
     <div class="light hemisphere"></div>
     <div class="dark hemisphere"></div>
@@ -76,6 +30,6 @@
     <button class="search-btn">Search</button>
   </div>
 
-  <script src="./js/moon.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

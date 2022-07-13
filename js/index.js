@@ -133,7 +133,6 @@ const moonPhaseData = (phase) => {
   return data[phase]
 }
 
-
 //-- /func --
 
 //-- init --
