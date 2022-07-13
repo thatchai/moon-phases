@@ -29,6 +29,7 @@ const onClickSearchBtn = () => {
   let moonP
   let selectDate
   let angle
+  let waterValue
 
   //
   if (!dateInputEl.value) {
@@ -46,8 +47,11 @@ const onClickSearchBtn = () => {
   setMoonPhaseName(moonFuncMoonPhaseData(moonP))
 
   //
-  setWaterValue(waterFuncWaterData(dateArr[0], dateArr[1], dateArr[2]))
-  
+  waterValue = waterFuncWaterData(dateArr[0], dateArr[1], dateArr[2])
+  setWaterValue(waterValue)
+
+  //
+  setWaterHeightPercent(waterFuncWaterValuePercent(waterValue))
 }
 
 const dateSplit = (dateStr) => {
@@ -62,11 +66,16 @@ const setWaterValue = waterValue => {
   waterValueEl.innerHTML = waterValue
 }
 
+const setWaterHeightPercent = percent => {
+  hWaterEl.style.height = percent + '%'
+}
+
 //-- init --
 let moonPhaseNameEl = document.querySelector('.moon-phase-name')
 let waterValueEl = document.querySelector('.water-value')
 let dateInputEl = document.querySelector('.date-input')
 let searchBtnEl = document.querySelector('.search-btn')
+let hWaterEl = document.querySelector('.h-water')
 
 //
 searchBtnEl.addEventListener('click', onClickSearchBtn)

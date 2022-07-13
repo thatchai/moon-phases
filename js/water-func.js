@@ -407,3 +407,10 @@ const waterFuncWaterData = (year, month, day) => {
   //
   return data[key1][key2]
 }
+
+const waterFuncWaterValuePercent = waterValue => {
+  let max = 5
+  waterValue = parseFloat(waterValue)
+  
+  return (waterValue * 100) / max
+}
