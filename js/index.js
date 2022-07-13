@@ -44,6 +44,10 @@ const onClickSearchBtn = () => {
   dateArr = dateSplit(dateInputEl.value)
   moonP = moonFuncGetMoonPhase(dateArr[0], dateArr[1], dateArr[2])
   setMoonPhaseName(moonFuncMoonPhaseData(moonP))
+
+  //
+  setWaterValue(waterFuncWaterData(dateArr[0], dateArr[1], dateArr[2]))
+  
 }
 
 const dateSplit = (dateStr) => {
