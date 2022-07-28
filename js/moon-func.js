@@ -63,14 +63,14 @@ const moonFuncGetMoonPhase = (year, month, day) => {
   //
   const moonFuncMoonPhaseData = (phase) => {
     let data = {
-      0: 'New Moon',
-      1: 'Waxing Crescent Moon',
-      2: 'Quarter Moon',
-      3: 'Waxing Gibbous Moon',
-      4: 'Full Moon',
-      5: 'Waning Gibbous Moon',
-      6: 'Last Quarter Moon',
-      7: 'Waning Crescent Moon'
+      0: 'แรม 15 ค่ำ (New Moon)',
+      1: 'ขึ้น Waxing Crescent Moon',
+      2: 'ขึ้น Quarter Moon',
+      3: 'ขึ้น Waxing Gibbous Moon',
+      4: 'ขึ้น 15 ค่ำ (Full Moon)',
+      5: 'ข้างแรม (Waning Gibbous Moon)',
+      6: 'ข้างแรม (Last Quarter Moon)',
+      7: 'ข้างแรม (Waning Crescent Moon)'
     }
   
     //

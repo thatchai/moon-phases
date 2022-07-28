@@ -39,12 +39,14 @@ const setMoonRotation = deg => {
     //moon rotation
     selectDate = new Date(dateInputEl.value)
     angle = moonFuncGetMoonPhaseRotation(selectDate)
+    console.log(angle)
     setMoonRotation(angle)
    
     //moon phase data
     dateArr = dateSplit(dateInputEl.value)
     moonP = moonFuncGetMoonPhase(dateArr[0], dateArr[1], dateArr[2])
     setMoonPhaseName(moonFuncMoonPhaseData(moonP))
+    setMoonPhasePercent(angle)
   
     //
     waterValue = waterFuncWaterData(dateArr[0], dateArr[1], dateArr[2])
@@ -61,6 +63,22 @@ const setMoonRotation = deg => {
   const setMoonPhaseName = phaseName => {
     moonPhaseNameEl.innerHTML = phaseName
   }
+
+  const setMoonPhasePercent = angle => {
+    let percent = 0
+
+    //
+    if (angle <= 180) {
+      percent = (angle * 100) / 180
+
+    } else {
+      percent = (360 - angle) * 100 / 180
+
+    }
+
+    //
+    moonPhasePercentEl.innerHTML = percent.toFixed(2) + '%'
+  }
   
   const setWaterValue = waterValue => {
     waterValueEl.innerHTML = waterValue
@@ -72,6 +90,7 @@ const setMoonRotation = deg => {
   
   //-- init --
   let moonPhaseNameEl = document.querySelector('.moon-phase-name')
+  let moonPhasePercentEl = document.querySelector('.moon-phase-percent')
   let waterValueEl = document.querySelector('.water-value')
   let dateInputEl = document.querySelector('.date-input')
   let searchBtnEl = document.querySelector('.search-btn')
