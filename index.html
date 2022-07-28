@@ -9,24 +9,33 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
 
-    <link rel="stylesheet" href="style-home.css"/>
-    <link rel="stylesheet" href="./css//index.css">
+    <!-- <link rel="stylesheet" href="style-home.css"/> -->
+    <link rel="stylesheet" href="./css/text.css">
+    <link rel="stylesheet" href="./css/index.css">
 
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+    <link 
+      rel="stylesheet" 
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+    <link 
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link 
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Athiti">
+    <link 
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Cairo">
     <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Tangerine">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Athiti">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Cairo">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Ubuntu">   
+      href="https://fonts.googleapis.com/css?family=Ubuntu">   
 
   <!-- js -->
-  <script type="text/javascript" src="more.js"></script>
+  <!-- <script type="text/javascript" src="more.js"></script> -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
@@ -68,7 +77,7 @@
             <img src="https://img.freepik.com/free-vector/phases-moon_1308-5331.jpg?w=1060&t=st=1658937525~exp=1658938125~hmac=d258ad61db6f2c2e332d952d2d1e47db9d6e73b04c66fff35b85b18e44d897be" alt="illustration-hero">
         </div>
 
-      <div class="moon-water" style="width: 100%;">
+      <div class="moon-water" style="width: 100%; margin-top: 10rem;">
 
         <div style="width: 100%; display: flex;">
           <!-- moon img -->
@@ -89,29 +98,38 @@
 
         </div>
 
-        <!-- moon result-->
-        <div style="width: 100%;">
-          <div class="moon-result">
-            <p>
-              <span>Moon Phase: </span>
-              <span class="moon-phase-name">-</span>
-              
-            </p>
+        <div style="width: 100%; display: flex;">
 
+          <div style="width: 50%; text-align: center;">
             <p>
-              <span>Water Value: </span>
-              <span class="water-value">-</span>
+              <span class="text-1.7rem">Moon Phase : </span>
+              <span class="moon-phase-name text-1.7rem">-</span>
+            </p>
+            <p>
+              <span class="text-1.7rem">bright Crescent moon : </span>
+              <span class="text-1.7rem">-</span>
             </p>
           </div>
-        
-     
-          <div>
-            <label>Select Date</label>
-            <input type="date" class="date-input">
+
+          <div style="width: 50%; text-align: center;">
+            <p>
+              <span class="text-1.7rem">Water Level: </span>
+              <span class="water-value text-1.7rem">-</span>
+            </p>
+          </div>
+
+        </div>
+
+      
+        <!-- -->
+        <div style="width: 100%; text-align: center; margin-top: 1rem;">
+          <div style="margin-bottom: 1rem;">
+            <label class="text-1.7rem">Select Date</label>
+            <input type="date" class="date-input text-1.7rem">
           </div>
 
           <div>
-            <button class="search-btn">Search</button>
+            <button class="search-btn all-btn">Search</button>
           </div>
 
         </div>
