@@ -14,6 +14,7 @@
     <!-- <link rel="stylesheet" href="style-home.css"/> -->
     <link rel="stylesheet" href="./css/text.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/parallax.css">
 
     <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
     <link 
@@ -32,7 +33,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Cairo">
     <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Ubuntu">   
+      href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;400&display=swap" rel="stylesheet">  
 
   <!-- js -->
   <!-- <script type="text/javascript" src="more.js"></script> -->
@@ -45,39 +49,71 @@
     <header class="header">
         <div class="logo">
             
-            <p alt="logo-bookmark">CRESCENT LUNAR</p>
+            <p class="name">CRESCENT LUNAR</p>
         </div>
 
         <nav class="navbar">
             <a href="#home">Home</a>
             <a href="#Process">Process</a>
-            <a href="#download">Download</a>
-            <a href="#footer">Contact</a>
-            <a href="#" class="btn">log in</a>
+            <a href="#contents">Contents</a>
+            <a href="#others">Others</a>
+
         </nav>
 
 
         <div class="fas fa-bars" id="menu-btn"></div>
     </header>
-    <!-- navbar sections starts  -->
+    <!-- navbar sections end  -->
+    
+<!-- parallax scrolling starts -->
+<section class="background">
+  <img src="./img/bgpp.jpg" id="bgpp">
+  <img src="./img/stars.png" id="stars">
+  <img src="./img/moon.png" id="moon">
+  <img src="./img/mountains_behind.png" id="mountains_behind">
+  <h2 id="text">Crescent Lunar</h2>>
+  <a href="#home" id="btn">Explore</a>
+  <img src="./img/mountains_front.png" id="mountains_front">
+  
+</section>
 
-   
+
+<script>
+  let stars = document.getElementById('stars');
+  let moon = document.getElementById('moon');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let mountains_front = document.getElementById('mountains_front');
+  
+
+  window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      stars.style.left = value * 0.25 + 'px' ; 
+      moon.style.top = value * 1.05 + 'px' ; 
+      mountains_behind.style.top = value * 0.5 + 'px' ;
+      mountains_front.style.top = value * 0 + 'px' ;  
+      text.style.marginRight = value * 4 + 'px' ;  
+      text.style.marginTop = value * 1.5 + 'px' ;  
+      btn.style.marginTop = value * 1.5 + 'px' ;  
+      
+  })
+</script>
+<!-- parallax scrolling end -->
+
+
     <!-- home section stars  -->
 
     <section class="home" id="home">
         <div class="content">
-            <h1>Simple Bookmark Manager</h1>
-            <p>A clean and simple interface to organize your favorite websites. open a browser tab and see your sites load instantly. try it for free!!</p>
+            <h1>Welcome To Crescent Lunar Website</h1>
+            <p>เว็บไซต์นี้สร้างขึ้นเพื่อแสดงรูปร่างของดวงจันทร์ที่เปลี่ยนไป พื้นที่ส่วนสว่างของดวงจันทร์เป็นเปอร์เซ็นต์ และระดับน้ำขึ้นน้ำลงในแต่ละวันที่สัมพันธ์กับทฤษฎีคณิตศาสตร์</p>
 
-            <a href="#" class="home-btn">get it on chrome</a>
+           
         </div>
 
 
-        <div class="image">
-            <img src="https://img.freepik.com/free-vector/phases-moon_1308-5331.jpg?w=1060&t=st=1658937525~exp=1658938125~hmac=d258ad61db6f2c2e332d952d2d1e47db9d6e73b04c66fff35b85b18e44d897be" alt="illustration-hero">
-        </div>
-
-      <div class="moon-water" style="width: 100%; margin-top: 10rem;">
+      <div class="moon-water" style="width: 100%; margin-top: 1rem;">
 
         <div style="width: 100%; display: flex;">
           <!-- moon img -->
@@ -85,7 +121,7 @@
             <div class="sphere"> 
               <div class="light hemisphere"></div>
               <div class="dark hemisphere"></div>
-              <div class="divider"></div>
+              <div class="fder"></div>
             </div>
           </div>
 
@@ -138,33 +174,42 @@
 
     </section>
     <!-- home section ends -->
-
     <!-- features sectin starts  -->
 
     <section class="features" id="Process">
         <div class="heading">
             <h1>Process</h1>
-            <p>Our aim is to make it quick and easy for you to access your favorite websites. your bookmarks sync between your devices so you can access them on the go</p>
+            <p>ส่วนนี้เป็นการอธิบายถึงการพิสูจน์สูตรที่อ้างอิงการนำมาคิดหาพื้นที่พระจันทร์เสี้ยวส่วนสว่าง ว่ามีที่มาอย่างไร หามุมอย่างไร </p>
         </div>
-
-
+        
+        <!-- 1 Tab  -->
         <div class="row">
-            <!-- 1 Tab  -->
-            <div class="image">
-                <img src="images/illustration-features-tab-1.svg" alt="illustration-features-tab-1">
+            <div class="column">
+                <center>
+                  <iframe class="responsive-iframe" scrolling="no" title="พิสูจน์สูตร" src="https://www.geogebra.org/material/iframe/id/tf5yduay/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" 
+                   width="800px" height="418px" style="border:0px;"> </iframe>
             </div>
+            
+                <img src="./img/prove1.png" class="prove-align" alt="" >
+                <img src="./img/prove2.png" class="prove-align" alt="" >
+                <img src="./img/prove3.png" class="prove-align" alt="" >
+                <img src="./img/prove4.png" class="prove-align" alt="" >
+                <img src="./img/prove5.png" class="prove-align" alt="" >
+                </center>
+            
+            
+            
 
-
-            <div class="content">
+            <!-- <div class="content">
                 <h1>Bookmark in one click</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint odit tempora, maiores quos qui quisquam accusamus ad officiis sapiente.</p>
                 <a href="#" class="all-btn">more info</a>
-            </div>
+            </div> -->
 
             <!-- 1 Tab  -->
 
             <!-- 2 Tab  -->
-            <div class="content">
+            <!-- <div class="content">
                 <h1>Intelligent search</h1>
                 <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
                 <a href="#" class="all-btn">more info</a>
@@ -172,11 +217,11 @@
 
             <div class="image">
                 <img src="images/illustration-features-tab-2.svg" alt="illustration-features-tab-2">
-            </div>
+            </div> -->
 
             <!-- 2 Tab  -->
 
-            <div class="image">
+            <!-- <div class="image">
                 <img src="images/illustration-features-tab-3.svg" alt="illustration-features-tab-3">
             </div>
 
@@ -184,7 +229,7 @@
                 <h1>Share your bookmarks</h1>
                 <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
                 <a href="#" class="all-btn">more info</a>
-            </div>
+            </div> -->
 
 
             <!-- 3 Tab  -->
@@ -196,37 +241,91 @@
     <!-- features sectin ends -->
 
 
-    <!-- downloads section starts  -->
+    <!-- coontent section starts  -->
 
-    <section class="download" id="download">
+    <section class="download" id="contents">
         <div class="heading">
-            <h1>Download Extension</h1>
-            <p>We've got more browsers in the pipeline. Please do le us know if you got've got a favorite you'd like us to prioritize</p>
+            <h1>Contents</h1>
+           
         </div>
 
-        <div class="box-container">
-            <div class="box">
-                <img src="images/logo-chrome.svg" alt="logo-chrome">
+        <div class="contents-content">
+            <div class="content-container">
+                <ul class="num">
 
-                <h3>Add to Chrome</h3>
-                <p>Minimum Version 63</p>
-                <a href="#" class="all-btn">install</a>
+                  <li id="h2">ตรีโกณมิติ (Trigonometry)</li>
+                  <br>
+                  <p>ฟังก์ชันตรีโกณมิติ คือ ฟังก์ชันของมุม ซึ่งมีความสำคัญในการศึกษารูปสามเหลี่ยมและปรากฏการณ์ในลักษณะเป็นคาบ
+                     ฟังก์ชันอาจนิยามด้วยอัตราส่วนของด้าน 2 ด้านของรูปสามเหลี่ยมมุมฉาก หรืออัตราส่วนของพิกัดของจุดบนวงกลมหนึ่งหน่วย</p>
+                  <br>
+                  <p >อัตราส่วนตรีโกณมิติ เป็นอัตราส่วนของรูปสามเหลี่ยมมุมฉาก โดยมีอัตราส่วนต่าง ๆ ดังนี้</p>
+                  <br>
+                  <center> <img class="img-res" src="./img/trigone3.png" width="800" height="350"></center>
+                  <li id="h2">วงกลม (Circle)</li>
+                    <ul class="c">
+                      <br>
+                      <li id="circle-content">วงกลมหนึ่งหน่วย</li>
+                    <p>วงกลมหนึ่งหน่วย จะแบ่งเป็นด้วยกัน 4 ควอดรันต์ ตามเครื่องหมายของตัวแปรในแกน x และตัวแปรในแกน y</p>
+                    <p>- ควอดรันต์ที่ 1 (Q1)  แกน x เป็น + และแกน y เป็น + เขียนง่าย ๆ ได้ว่า (+,+)</p>
+                    <p>- ควอดรันต์ที่ 2 (Q2)  แกน x เป็น – และแกน y เป็น + เขียนง่าย ๆ ได้ว่า (-,+)</p>
+                    <p>- ควอดรันต์ที่ 3 (Q3)  แกน x เป็น – และแกน y เป็น – เขียนง่าย ๆ ได้ว่า (-,-)</p>
+                    <p>- ควอดรันต์ที่ 4 (Q4)  แกน x เป็น + และแกน y เป็น – เขียนง่าย ๆ ได้ว่า (+,+)</p>
+                    <br> <center><img class="img-res" src="./img/trigone5.png" alt="" width="410" height="310"></center>
+                    <br>
+                      <li id="circle-content">พื้นที่วงกลม</li>
+                    <p >พื้นที่ทั้งหมดของวงกลมคือ 〖πr〗^2  </p>
+                    <br>
+                    <center>
+                    <iframe class="responsive-iframe" scrolling="no" title="circle area" src="https://www.geogebra.org/material/iframe/id/kcee4s6q/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+                     width="800px" height="418px" style="border:0px;"> </iframe>
+                    </center>
+                      <br>
+                      <li id="circle-content">เซกเตอร์วงกลม</li>
+                      <p>ชิ้นส่วนของวงกลมที่เกิดจากรัศมีสองเส้นซึ่งลากจากจุดศูนย์กลางไปยังจุดสองจุดบนวงกลม
+                         เซกเตอร์ที่ได้จะมีลักษณะเป็นรูปสามเหลี่ยมฐานโค้ง โดยเราสามารถหาพื้นที่ของเซกเตอร์ได้จาก</p>
+                      <br>
+                        <p id="bold">พื้นที่เซกเตอร์ = (มุมเซกเตอร์/360) x ¶r^2</p>
+                    <center>
+                        <img class="img-res" src="./img/trigone4.png"  width="380" height="300" alt="">
+                    </center>
+                    </ul>
+
+<br><br>
+                  <li id="h2">ข้างขึ้น-ข้างแรม (Moon Phases)</li>
+                  <br>
+                  <center>
+                  <iframe class="responsive-iframe" scrolling="no" title="เนื้อหา new" src="https://www.geogebra.org/material/iframe/id/eh5fctzt/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" 
+                  width="800px" height="418px" style="border:0px;"> </iframe></center>
+                  <br>
+                    <p id="normal">เกิดจากดวงจันทร์มีรูปร่างเป็นทรงกลม ไม่มีแสงในตัวเอง ด้านสว่างได้รับแสงจากดวงอาทิตย์ ส่วนด้านตรงข้ามไม่ได้รับแสงจากดวงอาทิตย์ การโคจรของดวงจันทร์รอบโลกทำให้มุมระหว่างดวงอาทิตย์ ดวงจันทร์ และโลก เปลี่ยนเปลี่ยนแปลงไปในทุกๆ วัน เมื่อมองดูดวงจันทร์จากพื้นโลก จึงมองเห็นเสี้ยวของดวงจันทร์มีขนาดเปลี่ยนไปเป็นวงรอบ เรียกว่า ข้างขึ้น และข้างแรม</p>
+                <br><p id="normal">รูปร่างจะปรากฏโตขึ้นจากเป็นเสี้ยวเล็กที่สุดเมื่อวันขึ้น 1 ค่ำ ถึงโตที่สุดเป็นรูปวงกลมหรือจันทร์เพ็ญเมื่อวันขึ้น 15 ค่ำ เนื่องจากในแต่ละวัน ด้านสว่างของดวงจันทร์ที่หันมาทางโลกมีขนาดไม่เท่ากัน สัดส่วนของด้านสว่างที่สะท้อนแสงมาทางโลกมีขนาดโตขึ้นสำหรับวันข้างขึ้น ภายหลังข้างขึ้นจะเป็นข้างแรม ขนาดปรากฏของดวงจันทร์สว่างลดลงจากรูปวงกลมเป็นรูปครึ่งวงกลมและเป็นเสี้ยวเล็ก ๆ จนมองไม่เห็นเรียกว่า วันเดือนดับ สามารถเเสดงข้อมูลได้ดังนี้</p>
+
+                    <div class="num-in">
+                      <ul class="num">
+                        <li>วันที่จันทร์ดับ หรือวันแรม 15 ค่ำ จะเป็นวันที่ดวงจันทร ์เคลื่อนไปทันตำแหน่ง ของดวงอาทิตย์ คืออยู่ฝั่งเดียว กับดวงอาทิตย์ ทำให้ไม่สามารถสะท้อนแสงมายังโลกได้</li>
+                        <li>วันที่จันทร์เพ็ญ หรือวันขึ้น 15 ค่ำ จะเป็นวันที่ดวงจันทร ์เคลื่อนไปอยู่ฝั่งตรงข้าม กับดวงอาทิตย์ ทำให้สามารถสะท้อนแสงมายังโลกได้มากที่สุด                      </li>
+                        <li>วันแรม 8 ค่ำ จะเป็นวันที่ดวงจันทร ์เคลื่อนไปทางตะวันออก เข้าหาดวงอาทิตย์ ซึ่งอยู่ทางตะวันออก ดวงจันทร์จะสะท้อนแสง มายังโลกเฉพาะทางฝั่ง ที่รับแสงจากดวงอาทิตย์ หรือซีกตะวันออก</li>
+                        <li>วันขึ้น 8 ค่ำ จะเป็นวันที่ดวงจันทร ์เคลื่อนไปทางตะวันออก ตรงข้ามกับ ดวงอาทิตย์ ซึ่งอยู่ทางตะวันตก ดวงจันทร์จะสะท้อนแสง มายังโลกเฉพาะทางฝั่ง ที่รับแสงจาก ดวงอาทิตย์ หรือซีกตะวันตก</li>
+                      </ul>
+                    </div>
+                <br><br>
+                  <li id="h2">น้ำขึ้น-น้ำลง (Tidal Current)</li>
+              <br>
+              <center>
+                  <iframe class="responsive-iframe" scrolling="no" title="น้ำขึ้นน้ำลง (เนื้อหา)" src="https://www.geogebra.org/material/iframe/id/cmwwjmpc/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false"
+                    width="800px" height="418px" style="border:0px;"> </iframe>
+                </center>
+                    <br>
+                  <p id="normal">ปรากฏการณ์น้ำขึ้น-น้ำลง เป็นปรากฏการณ์ที่ที่ระดับน้ำทะเลสูงขึ้น เกิดจากผลของแรงดึงดูดระหว่างมวลของดวงจันทร์และโลก โดยน้ำขึ้นจะเกิดบนผิวโลกบริเวณที่มีตำแหน่งใกล้ดวงจันทร์และตรงกันข้ามกับตำแหน่งของดวงจันทร์ ขณะที่น้ำลงเกิดในพื้นที่บนโลกที่มีพื้นที่ตั้งฉากกับตำแหน่งของดวงจันทร์  จากการที่โลกหมุนรอบตัวเองครบ 1 รอบ ทำให้บริเวณต่างๆ บนโลกในด้านที่ใกล้ดวงจันทร์และด้านตรงข้ามดวงจันทร์ เกิดปรากฏการณ์น้ำขึ้น-น้ำลง วันละ 2 รอบ</p>
+                  <br> 
+                  <p id="normal">น้ำขึ้น-น้ำลง มีช่วงเวลาระหว่างการขึ้นและการลงประมาณ 6 ชั่วโมง 12 นาที ทำให้น้ำขึ้นครั้งแรกถึงครั้งถัดไปห่างกันประมาณ 12 ชั่วโมง 25 นาที และวันถัดไปน้ำจะขึ้นช้าวันละประมาณ 50 นาที เพราะดวงจันทร์เคลื่อนไปอยู่ทางตะวันออกของจุดเดิมเกือบ 13 องศา</p>
+           <br>   <p id="normal">ปริมาณน้ำขึ้น-ลง อย่างละ 2 ครั้ง โดยปริมาณน้ำจะขึ้น-ลง มากในช่วง “น้ำเกิด” และปริมาณน้ำที่ขึ้นสูงนี้ จะสูงมากกว่าในช่วง “น้ำตาย” ปริมาณน้ำที่ขึ้นและลงจะต่ำกว่าในช่วงน้ำเกิด กระแสน้ำจะน้อยและไม่เชี่ยวกราก</p>
+          <br>    <p id="normal">น้ำเกิด เป็นปรากฏการณ์น้ำขึ้นสูงสุด เนื่องจากดวงอาทิตย์ ดวงจันทร์ และโลก โคจรมาอยู่ในแนวเดียวกัน จะเกิดในช่วงวันขึ้น 14 - 15 ค่ำ และวันแรม 14 - 15 ค่ำ โดยจะเกิดน้ำขึ้นสูงสุดพร้อมกันทั้ง 2 ด้าน</p>
+            <br>  <p id="normal">น้ำตาย เป็นปรากฏการณ์น้ำลงต่ำสุด เนื่องจากดวงจันทร์ และดวงอาทิตย์ เคลื่อนที่มาอยู่ในแนวตั้งฉากกับโลก แรงดึงดูดจากแรงโน้มถ่วงของทั้งดวงอาทิตย์และดวงจันทร์จะคานกัน ทำให้ช่วงนี้มีระดับน้ำต่ำสุด จะเกิดในช่วงวันขึ้น 8 ค่ำ และวันแรม 8 ค่ำ</p>
+                </ul>
             </div>
 
-            <div class="box">
-                <img src="images/logo-firefox.svg" alt="logo-firefox">
-
-                <h3>Add to Firefox</h3>
-                <p>Minimum Version 55</p>
-                <a href="#" class="all-btn">install</a>
-            </div>
-
-            <div class="box">
-                <img src="images/logo-opera.svg" alt="logo-opera">
-
-                <h3>Add to Opera</h3>
-                <p>Minimum Version 46</p>
-                <a href="#" class="all-btn">install</a>
+        </div>
             </div>
         </div>
     </section>
@@ -236,54 +335,87 @@
 
 
 
-    <!-- footer section starts  -->
+    <!-- others section starts  -->
 
-   <section class="footer" id="footer">
-       <div class="box-container">
-           <div class="box">
-               <h3>quick links</h3>
-               <a href="#"><i class="fas fa-chevron-right"></i>home</a>
-               <a href="#"><i class="fas fa-chevron-right"></i>features</a>
-               <a href="#"><i class="fas fa-chevron-right"></i>download</a>
-               <a href="#"><i class="fas fa-chevron-right"></i>contact</a>
-            </div>
-            
-            
-            <div class="box">
-                <h3>our services</h3>
-                <a href="#"><i class="fas fa-chevron-right"></i>bookmark extension</a>
-                <a href="#"><i class="fas fa-chevron-right"></i>chrome themes</a>
-                <a href="#"><i class="fas fa-chevron-right"></i>firefox themes</a>
-                <a href="#"><i class="fas fa-chevron-right"></i>screen recorder extension</a>
-                <a href="#"><i class="fas fa-chevron-right"></i>screen shot extension</a>
-           </div>
+   <section class="footer" id="others">
+    <div class="heading">
+      <h1>Others</h1>
+     
+  </div>
 
-           <div class="box">
-               <h3>contact info</h3>
-               <a href="#"><i class="fas fa-phone"></i>+123-456-789</a>
-               <a href="#"><i class="fas fa-phone"></i>+111-222-3333</a>
-               <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
-               <a href="#"><i class="fas fa-envelope"></i>company@example.com</a>
-               <a href="#"><i class="fas fa-map-marker-alt"></i>Mumbai, india - 12345</a>
-           </div>
+  <div class="contents-content">
 
-           <div class="box">
-               <h3>follow us</h3>
-               <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
-               <a href="#"><i class="fab fa-twitter"></i>facebook</a>
-               <a href="#"><i class="fab fa-instagram"></i>instagram</a>
-               <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
-               <a href="#"><i class="fab fa-pinterest"></i>pinterest</a>
-           </div>
-       </div>
+      <div class="content-container">
+        <h2>ฤดูกาล (Season)</h2>
+        <br>
+        
+        <p>ฤดูหรือฤดูกาล เป็นปรากฏการณ์ทางธรรมชาติที่เกิดขึ้นเนื่องจาก แกนของโลกที่หมุนรอบตัวเองเอียงทำมุม 23.5 องศา 
+          กับแนวซึ่งตั้งฉากกับแนวโคจรรอบดวงอาทิตย์ ทำให้ตำแหน่งที่รังสีดวงอาทิตย์ ตกตั้งฉากกับพื้นโลกเปลี่ยนไปตามช่วงเวลาของแนวทางการโคจร 
+          โดยมีตำแหน่งตั้งฉากเหนือสุดที่ 23.5 N เมื่อตำแหน่งดวงอาทิตย์เลื่อนขึ้นอยู่ในซีกโลกเหนือ และมีตำแหน่งใต้สุดที่ละติจูด 23.5 S 
+          เมื่อตำแหน่งดวงอาทิตย์เลื่อนลงไปอยู่ในซีกโลกใต้ ดังนั้น ทำให้พื้นที่ต่าง ๆ บนพื้นโลกในแต่ละช่วงเวลามีอุณหภูมิแตกต่างกันไป 
+          โดยพิจารณาตำแหน่งการโคจรของดวงอาทิตย์เป็นเกณฑ์</p>
+        <br>
+      <center>
+        <iframe class="responsive-iframe" scrolling="no" title="ฤดูกาล" src="https://www.geogebra.org/material/iframe/id/bwtejucb/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" 
+        width="800px" height="418px" style="border:0px;"> </iframe> 
+      </center>
+<br>
+      <div class="content-container">
+        <p id="black">บนโลกนี้สามารถแบ่งฤดูกาลออกเป็น 4 ฤดูด้วยกัน ได้แก่ ฤดูใบไม้ผลิ ฤดูร้อน ฤดูใบไม้ร่วง และฤดูหนาว</p>
+          <ul class="c">
+            <li>เริ่มต้นขึ้นในวันที่ 20 - 21 มิถุนายน เรียกว่า วันครีษมายัน (ครี-สะ- มา-ยัน) (Summer Solstice) ซึ่งเป็นวันที่่กลางวันยาวนานกว่ากลางคืนมากที่สุด</li>
+            <li>เริ่มต้นขึ้นในวันที่ 22-23 กันยายน เรียกว่า วันศารทวิษุวัท (สาด-ทะ-วิ-สุ-วัด) (Autumnal Equinox) เป็นวันที่ซีกโลกเหนือและซีกโลกใต้ได้รับแสงสว่างเท่ากัน ทำให้กลางวันและกลางคืนยาวนานเท่ากัน</li>
+            <li>เริ่มต้นขึ้นในวันที่20-21 ธันวาคม เรียกว่า วันเหมายัน (เห-มา-ยัน) (Winter Solstice) เป็นวันที่ซีกโลกเหนือเริ่มต้นเข้าสู่ฤดูหนาวอย่างเป็นทางการ กลางวันจะสั้นกว่ากลางคืน เนื่องจากช่วงเวลานี้ซีกโลกใต้หันเข้าหาดวงอาทิตย์ ทำให้ได้รับแสงสว่างมากกว่าซีกโลกเหนือ ดังนั้น ซีกโลกเหนือจึงเป็นฤดูหนาวและซีกโลกใต้จะเป็นฤดูร้อน</li>
+            <li>เริ่มต้นขึ้นในวันที่ 20-21 มีนาคม วันวสันตวิษุวัต (วะ-สัน-ตะ-วิ-สุ- วัด) (Vernal Equinox) ซีกโลกเหนือได้รับแสงสว่างจากดวงอาทิตย์เท่ากับซีกโลกใต้ ซีกโลกเหนือจะเริ่มเข้าสู่ฤดูใบไม้ผลิ ต้นไม้เริ่มผลิใบเพื่อรอเข้าสู่ฤดูร้อน ซึ่งเป็นช่วงที่พืชพรรณเจริญเติบโตได้ดีเพราะได้รับแสงจากดวงอาทิตย์เพื่อให้ในการสังเคราะห์ด้วยแสง</li>
+          </ul>
+      </div>  
+<br><br><br>      
+        
+        
+      <div class="content-container">
+        <p  id="out-head">ประเทศไทยโดยทั่ว ๆ ไปสามารถแบ่งออกได้เป็น 3 ฤดู ดังนี้</p>
+        <br>
+        <ul class="num">
+          <li>ฤดูร้อน</li>
+          <p>เริ่มต้นประมาณมีนาคมถึงเดือนพฤษภาคม เป็นช่วงเปลี่ยนจากมรสุมตะวันออกเฉียงเหนือ เป็นมรสุมตะวันตกเฉียงใต้ และเป็นระยะที่ขั้วโลกเหนือหันเข้าหาดวงอาทิตย์ โดยเฉพาะเดือนเมษายนบริเวณประเทศไทย ทำให้ได้รับความร้อนจากดวงอาทิตย์เต็มที่ สภาวะอากาศจึงร้อนอบอ้าวทั่วไป บางครั้งอาจมีมวลอากาศเย็นจากประเทศจีน แผ่ลงมาปกคลุมถึงประเทศไทยตอนบน ซึ่งก่อให้เกิดพายุฝนฟ้าคะนอง และลมกระโชกแรง พายุฝนฟ้าคะนองที่เกิดขึ้นในฤดูนี้มักเรียกอีกอย่างหนึ่งว่า พายุฤดูร้อน</p>
+          <p id="black">ลักษณะอากาศในฤดูร้อนพิจารณาจากอุณหภูมิสูงสุดของแต่ละวัน โดยมีเกณฑ์การพิจารณาดังนี้</p>
+          <p id="in">- อากาศร้อน อุณหภูมิระหว่าง 35.0 องศาเซลเซียส ถึง  39.9 องศาเซลเซียส</p>
+          <p id="in">- อากาศร้อนจัด อุณหภูมิตั้งแต่ 40.0 องศาเซลเซียส ขึ้นไป</p>
+<br>
+          <li>ฤดูฝน</li>
+          <p>เริ่มต้นประมาณเดือนมิถุนายนถึงเดือนตุลาคม เมื่อมรสุมตะวันตกเฉียงใต้พัดปกคลุมประเทศไทย และร่องความกดอากาศต่ำพาดผ่านประเทศไทย ทำให้มีฝนชุกทั่วไป ในเดือนกรกฎาคมปกติร่องความกดอากาศต่ำ จะเลื่อนกลับลงมาจากทางตอนใต้ของประเทศจีน พาดผ่านบริเวณประเทศไทยอีกครั้ง ทำให้มีฝนชุกต่อเนื่อง และปริมาณฝนเพิ่มขึ้น </p>
+          <br>
+          <p >เกณฑ์การพิจารณาปริมาณฝนในระยะเวลา 24 ชั่วโมงของแต่ละวันตั้งแต่เวลา 07.00 น. ของวันหนึ่งถึงเวลา 07.00 น.ของวันรุ่งขึ้นตามลักษณะของฝนที่ตกในประเทศที่อยู่ในเขตร้อนย่านมรสุมมีดังนี้</p>
+          <p id="in">- ฝนวัดจำนวนไม่ได้ ปริมาณฝนน้อยกว่า 0.1 มิลลิเมตร</p>
+          <p id="in">- ฝนเล็กน้อย ปริมาณฝนระหว่าง 0.1 - 10.0 มิลลิเมตร</p>
+          <p id="in">- ฝนปานกลาง ปริมาณฝนระหว่าง 10.1 - 35.0 มิลลิเมตร</p>
+          <p id="in">- ฝนหนัก ปริมาณฝนระหว่าง 35.1 - 90.0 มิลลิเมตร</p>
+          <p id="in">- ฝนหนัก ปริมาณฝนระหว่าง 35.1 - 90.0 มิลลิเมตร</p>
+          <p id="in">- ฝนหนักมาก ปริมาณฝนตั้งแต่ 90.1 มิลลิเมตรขึ้นไป</p>
+<br>
+          <li>ฤดูหนาว</li>
+          <p>เริ่มต้นประมาณพฤศจิกายนถึงเดือนกุมภาพันธ์ เมื่อมรสุมตะวันออกเฉียงเหนือ พัดปกคลุมประเทศไทยตั้งแต่กลางเดือนตุลาคม ในช่วงกลางเดือนตุลาคมนาน 1-2 สัปดาห์ เป็นช่วงเปลี่ยนฤดูจากฤดูฝนเป็นฤดูหนาว อากาศแปรปรวน ไม่แน่นอน อาจเริ่มมีอากาศเย็น หรืออาจยังมีฝนฟ้าคะนอง</p>
+          <p id="black">ลักษณะอากาศในฤดูหนาวพิจารณาจากอุณหภูมิต่ำสุดของแต่ละวัน โดยมีเกณฑ์การพิจารณาดังนี้</p>
+          <p id="in">- อากาศหนาวจัด อุณหภูมิต่ำกว่า 8.0 องศาเซลเซียส</p>
+          <p id="in">- อากาศหนาว อุณหภูมิระหว่าง 8.0 องศาเซลเซียส ถึง 15.9 องศาเซลเซียส</p>
+          <p id="in">- อากาศเย็น อุณหภูมิระหว่าง 16.0 องศาเซลเซียส  22.9 องศาเซลเซียส</p>
+          <center>
+            <br>
+            <iframe class="responsive-iframe" scrolling="no" title="ฤดูกาล" src="https://www.geogebra.org/material/iframe/id/jz6vumnf/width/1600/height/837/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" 
+            width="800px" height="418px" style="border:0px;"> </iframe></center>
+        </ul>
+      </div>
+        
+      </div>
+      </div>
+  </div>
 
-
-       <div class="credit">created by
-           <a href="https://www.youtube.com/channel/UCK5YMqyy_fjAtwgu9hjxXJg" target="_blank"><span>Pranav Raj</span> | all rights reserved</a>
+       <div class="credit">
+           <a href=""><span>Benchamarachuthit Chanthaburi School</span> | ESMTE</a>
        </div>
    </section>
 
-    <!-- footer section ends -->
+    <!-- others section ends -->
 
 
 

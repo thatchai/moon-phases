@@ -1,3 +1,6 @@
+*{
+    font-family: 'Mitr', sans-serif;
+}
 .sphere {
     border-radius: 100%;
     width: 300px;
