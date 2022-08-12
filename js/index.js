@@ -39,7 +39,7 @@ const setMoonRotation = deg => {
     //moon rotation
     selectDate = new Date(dateInputEl.value)
     angle = moonFuncGetMoonPhaseRotation(selectDate)
-    console.log(angle)
+    // console.log(angle)
     setMoonRotation(angle)
    
     //moon phase data
