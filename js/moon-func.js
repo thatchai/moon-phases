@@ -60,6 +60,42 @@ const moonFuncGetMoonPhaseRotation = date => {
   return 360 - Math.floor(currentMoonPhasePercentage * 360)
 }
 
+const moonFuncGetMoonPhaseAnglePercent = phase => {
+  let data = {
+    0: 0,
+    1: 1.09,
+    2: 4.32,
+    3: 9.55,
+    4: 16.54,
+    5: 25,
+    6: 34.55,
+    7: 44.77,
+    8: 55.23,
+    8: 65.45,
+    10: 75,
+    11: 83.46,
+    12: 90.45,
+    13: 95.68,
+    14: 98.91,
+    15: 100,
+    16: 98.91,
+    17: 95.68,
+    18: 90.45,
+    19: 83.46,
+    20: 75,
+    21: 65.45,
+    22: 55.23,
+    23: 44.77,
+    24: 34.55,
+    25: 25,
+    26: 16.54,
+    27: 9.55,
+    28: 4.32,
+    29: 1.09
+  }
+  return data[phase]
+}
+
 //
 const moonFuncMoonPhaseData = (phase) => {
   let data = {

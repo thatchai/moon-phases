@@ -1,14 +1,14 @@
-//
-const setMoonRotation = deg => {
+  //
+  const setMoonRotation = deg => {
     document.querySelector('.divider').style.transform = `rotate3d(0, 1, 0, ${deg}deg)`
-  
+
     const hemispheres = document.querySelectorAll('.hemisphere')
-  
+
     if (deg < 180) {
       // Left
       hemispheres[0].classList.remove('dark')
       hemispheres[0].classList.add('light')
-  
+
       // Right
       hemispheres[1].classList.add('dark')
       hemispheres[1].classList.remove('light')
@@ -16,19 +16,24 @@ const setMoonRotation = deg => {
       // Left
       hemispheres[0].classList.add('dark')
       hemispheres[0].classList.remove('light')
-  
+
       // Right
       hemispheres[1].classList.remove('dark')
       hemispheres[1].classList.add('light')
     }
   }
-  
+
+  const percent2Angle = percent => {
+    return (percent * 180) / 100
+  }
+    
   //
   const onClickSearchBtn = () => {
     let dateArr
     let moonP
     let selectDate
     let angle
+    let anglePercent
     let waterValue
   
     //
@@ -36,17 +41,24 @@ const setMoonRotation = deg => {
       return
     }
     
-    //moon rotation
-    selectDate = new Date(dateInputEl.value)
-    angle = moonFuncGetMoonPhaseRotation(selectDate)
+    //moon rotation (cancle)
+    // selectDate = new Date(dateInputEl.value)
+    // angle = moonFuncGetMoonPhaseRotation(selectDate)
     // console.log(angle)
-    setMoonRotation(angle)
+    // setMoonRotation(angle)
    
     //moon phase data
     dateArr = dateSplit(dateInputEl.value)
     moonP = moonFuncGetMoonPhase(dateArr[0], dateArr[1], dateArr[2])
     setMoonPhaseName(moonFuncMoonPhaseData(moonP))
-    setMoonPhasePercent(angle)
+    
+
+    //moon rotation
+    // selectDate = new Date(dateInputEl.value)
+    anglePercent = moonFuncGetMoonPhaseAnglePercent(moonP)
+    console.log(anglePercent)
+    setMoonRotation(percent2Angle(anglePercent))
+    setMoonPhasePercent2(anglePercent)
   
     //
     waterValue = waterFuncWaterData(dateArr[0], dateArr[1], dateArr[2])
@@ -78,6 +90,10 @@ const setMoonRotation = deg => {
 
     //
     moonPhasePercentEl.innerHTML = percent.toFixed(2) + '%'
+  }
+
+  const setMoonPhasePercent2 = angle => {
+    moonPhasePercentEl.innerHTML = angle.toFixed(2) + '%'
   }
   
   const setWaterValue = waterValue => {
