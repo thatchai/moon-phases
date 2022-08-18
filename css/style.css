@@ -366,7 +366,12 @@ html{
 
 
 /* footer section starts */
-
+.footer .responsive-iframe{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 0;
+}
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
